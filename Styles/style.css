@@ -1,0 +1,63 @@
+:root {
+    --primary: #ffffff;
+    --secondary: #f3f3f3;
+    --black: #424242;
+}
+
+* {
+    color: var(--black);
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url('../Images/grass.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.blanket_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('../Images/blanket.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+[class*="day"] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--primary);
+    border: var(--secondary) solid 20px;
+    border-radius: 50px;
+    width: 80%;
+    height: 10%;
+    margin: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: x-large;
+}
+
+.date{
+    margin-right: 1em;
+}
+
+.temprature {
+    margin-right: 0.5em
+}
+
+.advice {
+    margin-left: auto;
+}
