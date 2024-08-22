@@ -30,14 +30,32 @@ function weatherAPI(){
                     const date = day.date;
                     const avgTemp = day.day.avgtemp_c;
 
-                //append the data
-                $(".dates").append(`
-                    <div class='day'>
-                        <p class='date'>${date}</p>
-                        <p class='temperature'>${avgTemp}°C</p>
-                        <p class='advice'>maybe stay inside</p>
-                    </div>
-                `);
+                //check what message to put and then append the data
+                if(avgTemp >= 19){
+                    $(".dates").append(`
+                        <div class='day'>
+                            <p class='date'>${date}</p>
+                            <p class='temperature'>${avgTemp}°C</p>
+                            <p class='advice'>Go picknick it's perfect weather</p>
+                        </div>
+                    `); 
+                } else if (avgTemp >= 14 && avgTemp <= 19){
+                    $(".dates").append(`
+                        <div class='day'>
+                            <p class='date'>${date}</p>
+                            <p class='temperature'>${avgTemp}°C</p>
+                            <p class='advice'>You could go if you want</p>
+                        </div>
+                    `); 
+                } else if (avgTemp <= 14){
+                    $(".dates").append(`
+                        <div class='day'>
+                            <p class='date'>${date}</p>
+                            <p class='temperature'>${avgTemp}°C</p>
+                            <p class='advice'>It's not a good idea</p>
+                        </div>
+                    `); 
+                }
 
                 });
             },
