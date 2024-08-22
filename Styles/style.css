@@ -61,3 +61,11 @@ body {
 .advice {
     margin-left: auto;
 }
+
+.dates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+}
